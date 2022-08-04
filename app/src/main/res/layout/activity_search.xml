@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/outer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.EpaperActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/backarraow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:onClick="onClick"
+                    android:padding="@dimen/_15sdp"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_arrows" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/backarraow"
+                    android:text="Search"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:padding="@dimen/_6sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    app:srcCompat="@drawable/ic_search"/>
+
+                <EditText
+                    android:layout_toEndOf="@+id/image"
+                    android:layout_toStartOf="@+id/clear"
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textPersonName"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:hint="Enter Keyword"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/clear"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="onClick"
+                    android:tint="@color/black"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_close" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/noTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    app:srcCompat="@drawable/ic_search" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Search for all Rog and upchar by keywords "
+                    android:textSize="@dimen/_14sdp"
+                    android:padding="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

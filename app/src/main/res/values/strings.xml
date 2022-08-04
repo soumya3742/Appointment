@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Appointment</string>
+    <string name="app_name_new">Appointment</string>
+
+    <string name="default_error">Something went wrong, please try again later.</string>
+    <string name="oops">Oops!</string>
+    <string name="no_network_message">Please check your network connection.</string>
+    <string name="no_internet">No Internet</string>
+    <string name="no_data">No Data</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email_or_mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_an_account">Don\'t have an Account?</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="i_am_in_class">I am in Class</string>
+    <string name="next">Next</string>
+    <string name="what_would_you_like_to_nlearn_tody">Categories</string>
+    <string name="_6_chapters">6 Chapters</string>
+    <string name="chapters">Chapters</string>
+    <string name="loading">Loading &#8230;</string>
+
+    <string name="select_your_option">Select your Business</string>
+    <string name="select_image">Select Image</string>
+
+    <string name="pick_from_gallery">Pick From Gallery</string>
+    <string name="take_from_camera">Take From Camera</string>
+
+    <string name="invalid_pdf_title">An invalid Pdf load has started</string>
+    <string name="invalid_pdf_text">You should receive an exception in your PdfErrorHandler</string>
+
+    <string name="days_to_remaning">Days to go</string>
+    <string name="expires_on">Expires on …</string>
+    <string name="your_plan">Your Plan</string>
+    <string name="skip">Skip</string>
+    <string name="add_medical_stores">Add Medical Stores</string>
+    <string name="medical_name">Medical Name</string>
+    <string name="enter_medical_name">Enter Medical Name</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="enter_contact_name">Enter Contact Name</string>
+    <string name="state_name">State Name</string>
+    <string name="enter_state">Enter State</string>
+    <string name="city_name">District Name</string>
+    <string name="enter_city_name">Enter District Name</string>
+    <string name="email_id">Email Id</string>
+    <string name="register_here">Click here</string>
+    <string name="upload_your_prescription_here">upload your prescription here</string>
+    <string name="book_appoinment_now">book appointment now</string>
+    <string name="add_whole_seller">Add WholeSeller</string>
+    <string name="add_doctor">Add Doctor</string>
+    <string name="district_name">District Name</string>
+
+    <string-array name="menu_list_reporter">
+        <item>My Profile</item>
+        <item>Logout</item>
+    </string-array>
+
+    <array name="nav_icons_reporter">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_logout</item>
+    </array>
+
+</resources>

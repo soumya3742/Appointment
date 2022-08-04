@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.appointment.fragment.SideMenuFragment" />
+
+        <import type="com.appointment.preferences.AppPreferenceManager"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="center_vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                app:riv_oval="true"
+                app:riv_border_width="@dimen/_2dp"
+                app:riv_border_color="@color/colorAccent"
+                app:riv_mutate_background="true"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/iv_img"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_support"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_16"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/iv_img"
+                android:text="Hello "/>
+
+            <TextView
+                android:layout_toRightOf="@+id/hello"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@{AppPreferenceManager.getUserName(context)}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16" />
+
+            <TextView
+                android:layout_below="@+id/hello"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/iv_img"
+                android:text="@{`ID : `+ AppPreferenceManager.getUserId(context)}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_margin="12dp"
+            android:layout_height="@dimen/_1dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv_menu"/>
+
+    </LinearLayout>
+</layout>

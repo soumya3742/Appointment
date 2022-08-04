@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/backarraow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:onClick="onClick"
+                    android:padding="@dimen/_15sdp"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_arrows" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/backarraow"
+                    android:layout_toRightOf="@+id/backarraow"
+                    android:text="My Profile"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="5dp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="30dp">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewMulti"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Full Name"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorAccent" />
+
+                <EditText
+                    android:id="@+id/tvUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/name"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewMulti"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Business Name (If Any)"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent" />
+
+                <EditText
+                    android:id="@+id/tvbusinessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Business Name"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewMulti"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Email"
+                    android:textColor="@color/colorAccent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/emailid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:letterSpacing="0.05"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewMulti"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Contact"
+                    android:textColor="@color/colorAccent" />
+
+
+                <EditText
+                    android:id="@+id/addMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/phone_number"
+                    android:letterSpacing="0.05"
+                    android:onClick="onClick"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewMulti"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="State"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent" />
+
+                <Spinner
+                    android:id="@+id/tvstate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/enter_state"
+                    android:padding="10dp"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:ignore="UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewMulti"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="City"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent" />
+
+                <Spinner
+                    android:id="@+id/tvcity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/enter_city_name"
+                    android:padding="10dp"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:ignore="UnusedAttribute" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewMulti"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Pincode"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent" />
+
+
+                <EditText
+                    android:id="@+id/pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Pincode"
+                    android:letterSpacing="0.05"
+                    android:onClick="onClick"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_margin="@dimen/_15dp"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="Update"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap,UnusedAttribute" />
+
+            </LinearLayout>
+
+           <!-- <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center|left"
+                android:text="View Your Business"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:padding="@dimen/_10dp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/add_medical_store"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="onClick"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_80dp"
+                            android:layout_margin="@dimen/_5dp"
+                            app:cardBackgroundColor="@color/app_backgroud"
+                            app:cardCornerRadius="@dimen/_6dp"
+                            app:cardElevation="@dimen/_2dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_70dp"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_15dp"
+                                android:tint="@color/colorAccent"
+                                app:srcCompat="@drawable/ic_medical_store" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_regular"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:minLines="2"
+                            android:paddingLeft="@dimen/_5dp"
+                            android:paddingRight="@dimen/_5dp"
+                            android:text="As Chemist"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_whole_seller"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="onClick"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80dp"
+                            android:layout_margin="@dimen/_5dp"
+                            app:cardBackgroundColor="@color/app_backgroud"
+                            app:cardCornerRadius="@dimen/_6dp"
+                            app:cardElevation="@dimen/_2dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iv_img"
+                                android:layout_width="@dimen/_70dp"
+                                android:layout_height="@dimen/_70dp"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_15dp"
+                                android:tint="@color/colorAccent"
+                                app:srcCompat="@drawable/ic_username" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_regular"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:minLines="2"
+                            android:paddingLeft="@dimen/_5dp"
+                            android:paddingRight="@dimen/_5dp"
+                            android:text="As Wholesaler"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_doctor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="onClick"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80dp"
+                            android:layout_margin="@dimen/_5dp"
+                            app:cardBackgroundColor="@color/app_backgroud"
+                            app:cardCornerRadius="@dimen/_6dp"
+                            app:cardElevation="@dimen/_2dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_70dp"
+                                android:layout_height="@dimen/_70dp"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_15dp"
+                                android:tint="@color/colorAccent"
+                                app:srcCompat="@drawable/ic_consultant" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_regular"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:minLines="2"
+                            android:paddingLeft="@dimen/_5dp"
+                            android:paddingRight="@dimen/_5dp"
+                            android:text="As Doctor"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sp" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

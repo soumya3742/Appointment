@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.appointment"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 19
+        versionName "8.3"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res']
+            res.srcDirs += ['src/main/res2']
+            res.srcDirs += ['src/main/res3']
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        abortOnError false
+        disable "ResourceType"
+        checkAllWarnings false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/androidx.exifinterface_exifinterface.version'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude 'META-INF/core_release.kotlin_module'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.1.0'
+
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+
+    implementation 'com.github.d-max:spots-dialog:0.7@aar'
+    implementation 'com.psoffritti.librarysampleapptemplate:core:1.0.2'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation("com.github.bumptech.glide:glide:4.11.0") {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
+
+    annotationProcessor 'androidx.annotation:annotation:1.1.0'
+
+    implementation 'es.voghdev.pdfviewpager:library:1.1.2'
+
+    implementation 'com.razorpay:checkout:1.5.12'
+    implementation 'com.razorpay:razorpay-java:1.3.5'
+
+    implementation 'com.yayandroid:LocationManager:2.2.0'
+
+    implementation 'com.github.javiersantos:AppUpdater:2.7'
+
+    implementation 'id.zelory:compressor:2.1.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+
+    implementation 'com.github.thunder413:DateTimeUtils:3.0'
+    
+}

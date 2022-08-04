@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_56dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:letterSpacing="0.08"
+            android:padding="15dp"
+            android:text="@string/select_your_option"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_20"
+            bind:targetApi="lollipop" />
+
+        <RelativeLayout
+            android:id="@+id/add_medical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEBEE"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/_20dp">
+
+            <TextView
+                android:id="@+id/medical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Add Medical Store"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_16"
+                bind:targetApi="m" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_whole_seller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20dp"
+            android:background="#FFF8E1">
+
+
+            <TextView
+                android:id="@+id/wholeseller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/add_whole_seller"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16"
+                android:textStyle="bold"
+                bind:targetApi="m" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_doctoe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1F5FE"
+            android:padding="@dimen/_20dp">
+
+            <TextView
+                android:id="@+id/doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/add_doctor"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16"
+                android:textStyle="bold"
+                bind:targetApi="m" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

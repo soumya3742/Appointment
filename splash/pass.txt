@@ -1,0 +1,6 @@
+keystore password = chikitsa
+DistributionKeyStoreAlias = DistributionKeyStorechikitsa
+password = Aliaschikitsapass
+
+
+

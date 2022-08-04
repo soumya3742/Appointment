@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F4000A</color>
+    <color name="colorPrimaryDark">#DC010A</color>
+    <color name="colorAccent">#F4000A</color>
+    <color name="colorAccent_light">#5576c7a8</color>
+    <color name="color_splash">#76C7A8</color>
+
+    <color name="appColor">#3C7ECC</color>
+    <color name="app_backgroud">#e3ebe5</color>
+    <color name="offWhite">#f2f2f2</color>
+    <color name="gray">#d2d2d2</color>
+
+    <color name="card_default_shadow_color">#319b9b9b</color>
+    <color name="card_default_border_color">#fff6f6f6</color>
+
+    <color name="black">#222222</color>
+    <color name="white">#ffffff</color>
+    <color name="box_gray">#E6E6E6</color>
+    <color name="light_gray">#AAE6E6E6</color>
+    <color name="skin_color">#FFE9D7</color>
+
+    <color name="text_gray">#6C6C6C</color>
+    <color name="colorBackground">#f9f9fa</color>
+    <color name="colorTextSubtitle">#4e4e4e</color>
+    <color name="colorTextTitle">#262626</color>
+    <color name="green">#8BF418</color>
+    <color name="red">#F4184B</color>
+    <color name="red_light">#55F4184B</color>
+</resources>
